@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecell Task</title>
+</head>
+<style>
+    .navbar {
+  /* border: 2px solid #ffcc5c; */
+  display: flex;
+  /* flex-direction: row; */
+  width: auto;
+  height: 80px;
+  /* margin: 32px; */
+  font-size: 30px;
+  justify-content: flex-end;
+  padding-top: 25px;
+  box-shadow: 0px 5px 5px grey;
+}
+
+.Home{ 
+    /* margin-right: auto; */
+    margin: 10px;
+}
+.Linkedin{ 
+    /* margin-right: auto; */
+    margin: 10px;
+}
+.Grid{ 
+    /* margin-right: auto; */
+    margin: 10px;
+}
+
+.container{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /* border: 2px solid blue; */
+    height: 640px;
+    display: flex;
+    /* justify-content: space-around; */
+}
+.subcontainer{
+    padding: 23px 12px ;
+    /* border: 2px solid rgb(0, 255, 106); */
+    border-radius: 22px;
+    width: 540px;
+    height: 540px;
+}
+
+#two2{
+    background-color: rgba(23, 117, 204, 0.816);
+  width: 540px; 
+  height: 540px; 
+   background-image: url('https://media.licdn.com/dms/image/C4D0BAQGSZ83BceB4vQ/company-logo_200_200/0/1615316170379?e=1703116800&v=beta&t=hQzBH3Z2mmGeHLqCa4PAaaDj4BfTBOPbp5k24EMTsvo'); 
+background-size: 100% 100%; 
+  background-position: center; 
+   background-repeat: no-repeat;
+  border: 1px solid #000; 
+
+
+    /* background-size: cover;
+        background-repeat: no-repeat; */
+        /* background-attachment: fixed; */
+        /* background-position: center; */
+}
+#one1{
+    display: flex;
+    margin-left: 200px;
+    box-shadow: 0px  0px  5px 5px grey;
+    /* box-shadow: -5px -5px 2px grey; */
+
+    background-image: linear-gradient(135deg, rgb(61, 61, 245), rgb(250, 68, 250));
+}
+/* #three3{
+    margin-right: 200px;
+} */
+#two2{
+    margin: 0 66px;
+}
+
+#three3 {
+  width: 540px; 
+  height: 540px;
+  background-color: #84929c; /* Background color of the outer square */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.square {
+    border-radius: 22px;
+  background-color: #00008B; /* Background color of the inner squares */
+  width: calc(100% - 10px); /* Each inner square takes up 1/3 width of the grid cell minus the gap */
+  height: calc(100% - 10px);
+  width: 100%;
+  height: 100%;
+  /* background-color: #3498db; */
+  cursor: pointer;
+
+
+}
+
+/* new code  */
+/* .container {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+} */
+
+/* .subcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  width: 80%;
+  height: 80%;
+} */
+/* linkedin css is not working if you can help I would appreciate */
+#Linkedin{
+    text-decoration: none;
+    text-decoration-color: aquamarine;
+}
+
+
+
+
+
+</style>
+<script>
+    // tbh I recently started learning js and it took  me 2 hr + to extract this code from chatgpt  😭
+document.addEventListener("DOMContentLoaded", function () {
+  const squares = document.querySelectorAll(".square");
+  const lastSquare = document.querySelector(".last-square");
+  let clickCount = 0;
+  let clickSequence = [];
+
+  squares.forEach((square, index) => {
+    square.addEventListener("click", () => {
+      
+      square.style.backgroundColor = "red";
+
+      
+      clickCount++;
+
+      
+      clickSequence.push(index);
+
+      
+      if (clickCount == squares.length) {
+        resetColors();
+      }
+    });
+  });
+
+  function resetColors() {
+    clickSequence.forEach((index, sequenceIndex) => {
+      setTimeout(() => {
+        squares[index].style.backgroundColor = "#00008B"; 
+      }, sequenceIndex * 200); 
+    });
+
+    
+    clickCount = 0;
+    clickSequence = [];
+  }
+});
+
+</script>
+
+
+
+
+    
+    <body>
+        <nav class="navbar">
+            <div class = "Home">Home</div>
+            <div class = " Grid" status="active">Grid</div>
+            <div class="Linkedin" id="Linkedin"> <a href="https://www.linkedin.com/in/ajeet-kumar-08864a20b/" target="_blank">Linkedin</a></div>
+        </nav>
+        <div class="container">
+            <div class="subcontainer" id="one1">1</div>
+            <div class="subcontainer" id="two2" >
+                </div>
+            <div class="subcontainer" id="three3" >
+                <!-- <div class="chhotusquare" onClick="getRandomColor()"></div> -->
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square" ></div>
+                <div class="square last-square" ></div>
+            </div>
+        </div>
+       
+    </body>
+
+</html>
+
+
+
