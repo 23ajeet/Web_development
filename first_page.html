@@ -7,6 +7,11 @@
     <title>first_page</title>
     
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
         .logo img{
             width: 100px;
             height: 100px;
@@ -39,7 +44,7 @@
         .navbar a{
             /* margin-top: 333px; */
             margin: 93px;
-            margin left: 30px;
+            margin-left: 30px;
             text-decoration: none;
             font-size: 30px;
             
@@ -50,11 +55,12 @@
             color: rgb(167, 146, 187);
 
         }
-        .btn{
+        .btn-login{
+            cursor: pointer;
             font-size: 30px;
             border: 2px solid black;
             background: transparent;
-            text-decoration-color: blue;
+            /* text-decoration-color: blue; */
             margin-right: 60px;
             border-radius: 10px;
             padding: 10px;
@@ -65,6 +71,65 @@
             width: 100%;
             height: 3000px;
             border: 2px solid red;
+        }
+
+        .overlay{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            z-index: -1;
+            opacity: 0;
+            transition: 1s;
+
+        }
+        .showoverlay{
+            opacity: 1;
+            z-index: 1;
+        }
+        .login-form{
+            padding: 30px;
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 0 10px 3px blue;
+            z-index: 2;
+            /* to make form in centre  */
+
+            position: absolute;
+            left: 50%;
+            top: -50%;
+            transform: translate(-50%, -50%);
+            transition: 2s;
+
+        }
+        .showloginform{
+            top: 50%;
+        }
+
+        .login-form input{
+            width: 100%;
+            height: 35px;
+            margin-bottom: 12px;
+        }
+
+        .login-form button{
+            background-color: black;
+            color: brown;
+            padding: 13px 15px;
+        }
+        .login-form span{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: red;
+            color: aliceblue;
+            width: 20px;
+            height: 20px;
+            /* justify-content: center; */
+            text-align: center;
+            cursor: pointer;
+            line-height: 20px;
         }
     </style>
 </head>
@@ -79,25 +144,54 @@
             <a href="">BUDGET</a>
             <a href="">FAQ</a>
             <!-- <a href="">LOGIN</a> -->
-            <button type="button" class="btn">LOGIN</button>
+            <button type="button" class="btn-login" onclick="showPopup()">LOGIN</button>
             <!-- <a href="">SIGNUP</a> -->
-            <button type="button" class="btn">SIGNUP</button>
+            <button type="button" class="btn-login">SIGNUP</button>
+            <div class="overlay"> </div>
+
+            <!-- login form popup on click LOGIN button  -->
+            <div class="login-form">
+                <span>&times;</span>
+                <form action="">
+                   <div>
+                    <label for="">Username</label>
+                    <input type="text">
+                   </div>
+                   <div>
+                    <label for="">Password</label>
+                    <input type="password">
+                   </div>
+                   <button type="button" class="btn">LOGIN</button>
+
+                </form>
+            </div>
+
         </nav>
     </header>
 
-    <div class="div1">
+    <!-- <div class="div1">
         <ul>ajeet is front end developer
 
         </ul>
         <div>
 
         </div>
-    </div>
+    </div> -->
 
 </body>
 
-<div>
+<!-- <div>
     hi i am  ajeet
-</div>
+</div> -->
+
+<script>
+    function showModal(){
+        document.querySelector('.overlay').classlist.add('showoverlay');
+        document.querySelector('.loginform').classlist.add('showloginform');
+    }
+
+    var btnlogin= document.querySelector(".btn-login");
+    btnlogin.addEventListener("click",showModal)
+</script>
 
 </html>
