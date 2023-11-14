@@ -1,0 +1,43 @@
+JavascriptTut1.js
+
+What is Javascript?
+
+1. It is client side scripting language.
+2. It make web pages alive.
+3. It is used to perform action in web page.
+like form submit on click, like I am taking input of 3 numbers from client and show him/her average of that
+
+4. It was earlier called Livescript.
+5. It also help in transfering data to the server.
+6. AJAX request ; i.e Bina page ko refresh kiye dynamically change karne ke liye
+7. DOM;Document Object Model, page is available as DOM, jab bhi CWH DOM kahe, wo page ki baat kar rha honge
+DOM has html, body, style, div, nav
+Dom ko js se control kar sakte
+js se event occur hone pe kuch change kara sakte
+
+What can javascript do?
+1. Js can execute not only in browser but also on server
+2.We will use Node Js
+
+What can in-browser js can do?
+1. To use js in browser it has to be safe, means if we use to view website, it should  not have low level acess for memory and cpu 
+2. Add new html and change existing html from DOM
+3. React to user event like click, response on connecting to server, ker press, mouse movement
+4. AJAX requests, 
+5. Get and set cookies, baar baar login karne se bachata h, time saving, use local storage,
+
+What can in-browser js can not do?
+1. Read and write to and from Hard disk
+(by default)Same origin policy; means cross site ki data ko aise request nahi kar skate; although its possible to share data with some handshake
+
+what makes js unique?
+1. full support of html and css
+2. simple things support like fetch API and all
+3. Major modern browser support
+
+
+js versions:
+Maintained by community
+ECMA script makes js better
+1997->1998->1999->2015->2016->2017->2018
+
