@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Strings and string methods</title>
+    <style>
+        #content{
+            border: 3px solid red;
+            margin: auto;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quia unde modi deleniti libero, temporibus aliquam, soluta, obcaecati voluptates quam saepe repellendus suscipit velit nam tempore tempora optio quis aut praesentium illum hic! Reiciendis?</p>
+        <div id="content"></div>
+   
+    </div>
+
+    <script>
+        var string1 = "this is 'so beautiful' javascript string "
+        var string2 = 'this is "so elegant" javascript string'
+        console.log(string1+string2)
+        console.log(`just looking like wow`)
+
+        //template literal
+
+        var name =`Ajeet`;
+        var month = "November";
+        var temp = `${name} is a very kind person and his birthday is in ${month}`;
+        console.log(temp)
+
+        //calculate length(character)
+        var len= name.length;
+        console.log(`Length of name is ${len}` )
+
+        //escape sequence character
+        console.log("Hello W\norld")
+        console.log("Hello Wo\\nrld")
+        console.log("Hello Wor\tld")
+        console.log("Hello World")
+
+        //string constructor
+        var y= new String("this is me Ajeet")
+        console.log(y)
+
+        //add html with js
+        document.getElementById('content').innerHTML ='<h3> This is a h3 heading</h3>'
+    </script>
+</body>
+</html>
