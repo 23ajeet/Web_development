@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in Javascript</title>
+</head>
+<body>
+    <script>
+        var str= `My name is Ajeet Kuamr`
+        console.log(str)
+
+        //for first occurence 
+        var position = str.indexOf('am')
+        console.log(position)
+
+
+        //for last occurence 
+        var position = str.lastIndexOf('am')
+        console.log(position)
+
+        //slicing a substring from a string
+        var substr= str.slice(3,9);
+        console.log(substr)
+
+        //substring from a string
+        var substr= str.substring(3,9);
+        console.log(substr)
+
+        //substring from a string, it works like 3 se start kro aur aage 9 extract kr lo
+        var substr= str.substr(3,9);
+        console.log(substr)
+
+        //replace a substring in a string
+        var  replaced= str.replace('Ajeet', 'Dilkhush')
+        console.log(str)
+        console.log(replaced)
+
+        //to change string in uppercase and lowercase completely
+        console.log(replaced.toLowerCase())
+        console.log(str.toUpperCase())
+
+        //to add(concat) two or more string
+        var newString= replaced.concat('Dilkhush is my friend', 'He is in medical college')
+        console.log(newString)
+
+        var strWithWhiteSpaces= "   this is a string with white    spaces extra white space in betweem and front and back also    "
+        console.log(strWithWhiteSpaces)
+
+        //trim() remove white space from front and back only
+        console.log(strWithWhiteSpaces.trim())
+
+        //extract character from string
+        var char5= str.charAt(5)
+        console.log(char5)
+
+        //UTF 16 char code (not so important)
+        var char5= str.charCodeAt(5)
+        console.log(char5)
+
+        console.log(str[4])//get the character directly
+
+
+
+
+    </script>
+</body>
+</html>
