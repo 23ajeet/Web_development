@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Conditionals</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+            <li>item-4</li>
+            <li>item-5</li>
+            <li>item-6</li>
+            <li>item-7</li>
+            <li>item-8</li>
+            <li>item-9</li>
+        </ul>
+    </div>
+    <script>
+        //redeclaring variable in var does not give error but it can cause problem in long programme
+        var string1= "this is a string";
+        var string1= "this is a string2";
+
+        console.log(string1);
+
+        //redeclaring variable in let gives error like other programming lang
+        // let str= " this is a let string"
+        // let str= " this is a let string23"
+        // Uncaught SyntaxError: Identifier 'str' has already been declared
+
+        let a="this is a global declaration of variable";
+        {
+            let a= "this is local declaration of variable within this block, hence this way it doesnt gie any error"
+
+            console.log(a)
+        }
+        console.log(a)
+
+
+        // const k= " this cant be changed";
+        // k="trying to change const";
+        // console.log(k)
+        // Uncaught TypeError: Assignment to constant variable
+
+        let age = 12;
+        if(age>6 && age <14){
+            console.log("You have fundamental right for education");
+        }
+        else{
+            console.log("You dont have fundamental right for education but still you can :)");
+        }
+
+        const num = 23;
+        switch (num) {
+            case 23:
+
+                console.log("my birthdate is 23rd of Nov")
+                break;
+            case 11:
+                console.log("month of my birthday is november")   
+                break;
+
+            case 2002:
+                console.log("year of my birth is 2002")
+
+            default:
+                console.log("the data does not have my birth date, month or year")
+                break;
+        }
+
+        //break is used to come out of switch statement
+        // if we dont use break: then matched case aur uske baad wale run ho jate h, for eg, if num =11 to case 11, run kregea, print krega fir uske baad wale case bhi print kr dega,
+
+
+
+    </script>
+</body>
+</html>
