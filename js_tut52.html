@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <div class="container">
+        <p >this is body </p>
+    </div>
+
+    <script>
+        
+        //let is like container which is used to store values
+        //In javascript we have two types of values: primitive and reference
+        //ie either objects are made or primitive data types
+
+        // primitive data types are integer, string, boolean, null or undefined
+        // undefined is default value
+
+        let myVar1=34;
+        let myVa2r="this is string";
+        let myVar3=true;
+        let myVar4=null;
+        let myVar5=undefined;
+
+        // primitive ke alwa hum kuch bhi banate hai to wo object hota hai
+        // object stores our key(name, salary..) vlaue pairs("ajeet", 100) as in below example
+
+        let employee= {
+            name: "Ajeet",
+            salary: 100,
+            tech_stack: "mySQl",
+            tech_stack2: "node.js",
+        }
+        console.log(employee)
+
+        // array is also an Object, it stores any type of value
+        let names = [1,2,"Ajeet", "Nodejs", undefined, null];
+        console.log(names) //to print complete array
+        console.log(names[2])// to print second index value
+
+        //another way to define an array, i,e. using "new"
+        let names2= new Array(1,2,"ka",4,4,2,"ka",1,"Dilkhush", "Doctor", undefined, null)
+        console.log(names2)
+        console.log(names2.length)// to check the number of element
+
+        // to sort an array
+        names2= names2.sort();
+        console.log(names2)
+
+        //to push an element in the end
+        names2.push("new element is pushed")
+        console.log(names2)
+
+        //try in console
+        // employee.name
+        // employee.salary
+        // employee['name']<- this method is mostly used when there is space in between of key name
+
+        let names3= new Array(23)// array with 23 undefined element
+        console.log(names3)
+        names3.push("new element is pushed in names3")
+        console.log(names3)
+        
+
+    </script>
+</body>
+</html>
